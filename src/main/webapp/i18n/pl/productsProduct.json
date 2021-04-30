@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "productsProduct": {
+      "home": {
+        "title": "Product",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Product",
+        "createOrEditLabel": "Dodaj lub edytuj: Product",
+        "search": "Szukaj Product",
+        "notFound": "No Products found"
+      },
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Product"
+      },
+      "id": "ID",
+      "name": "Name",
+      "eanCode": "Ean Code",
+      "productCategory": "Product Category",
+      "productUnit": "Product Unit"
+    }
+  },
+  "productsApp": {
+    "productsProduct": {
+      "created": "Utworzono nowy obiekt typu Product z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Product z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Product z identyfikatorem {{ param }}"
+    }
+  }
+}

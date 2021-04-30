@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "productsProduct": {
+      "home": {
+        "title": "Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Product",
+        "createOrEditLabel": "Create or edit a Product",
+        "search": "Search for Product",
+        "notFound": "No Products found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Product"
+      },
+      "id": "ID",
+      "name": "Name",
+      "eanCode": "Ean Code",
+      "productCategory": "Product Category",
+      "productUnit": "Product Unit"
+    }
+  },
+  "productsApp": {
+    "productsProduct": {
+      "created": "A new Product is created with identifier {{ param }}",
+      "updated": "A Product is updated with identifier {{ param }}",
+      "deleted": "A Product is deleted with identifier {{ param }}"
+    }
+  }
+}

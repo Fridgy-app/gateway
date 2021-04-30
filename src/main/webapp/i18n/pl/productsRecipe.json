@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "productsRecipe": {
+      "home": {
+        "title": "Recipe",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Recipe",
+        "createOrEditLabel": "Dodaj lub edytuj: Recipe",
+        "search": "Szukaj Recipe",
+        "notFound": "No Recipes found"
+      },
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Recipe {{ id }}?"
+      },
+      "detail": {
+        "title": "Recipe"
+      },
+      "id": "ID",
+      "name": "Name",
+      "instructionsBody": "Instructions Body",
+      "recipeIngredient": "Recipe Ingredient",
+      "user": "User"
+    }
+  },
+  "productsApp": {
+    "productsRecipe": {
+      "created": "Utworzono nowy obiekt typu Recipe z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Recipe z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Recipe z identyfikatorem {{ param }}"
+    }
+  }
+}

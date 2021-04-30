@@ -1,0 +1,33 @@
+{
+  "gatewayApp": {
+    "productsGroceryItem": {
+      "home": {
+        "title": "Grocery Item",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Grocery Item",
+        "createOrEditLabel": "Dodaj lub edytuj: Grocery Item",
+        "search": "Szukaj Grocery Item",
+        "notFound": "No Grocery Items found"
+      },
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Grocery Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Grocery Item"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "description": "Description",
+      "user": "User",
+      "product": "Product",
+      "unit": "Unit"
+    }
+  },
+  "productsApp": {
+    "productsGroceryItem": {
+      "created": "Utworzono nowy obiekt typu Grocery Item z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Grocery Item z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Grocery Item z identyfikatorem {{ param }}"
+    }
+  }
+}

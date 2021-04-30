@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "productsProductUnit": {
+      "home": {
+        "title": "Product Units",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Product Unit",
+        "createOrEditLabel": "Create or edit a Product Unit",
+        "search": "Search for Product Unit",
+        "notFound": "No Product Units found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Product Unit {{ id }}?"
+      },
+      "detail": {
+        "title": "Product Unit"
+      },
+      "id": "ID",
+      "name": "Name",
+      "product": "Product"
+    }
+  },
+  "productsApp": {
+    "productsProductUnit": {
+      "created": "A new Product Unit is created with identifier {{ param }}",
+      "updated": "A Product Unit is updated with identifier {{ param }}",
+      "deleted": "A Product Unit is deleted with identifier {{ param }}"
+    }
+  }
+}

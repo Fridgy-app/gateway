@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "productsRecipeIngredient": {
+      "home": {
+        "title": "Recipe Ingredient",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Recipe Ingredient",
+        "createOrEditLabel": "Dodaj lub edytuj: Recipe Ingredient",
+        "search": "Szukaj Recipe Ingredient",
+        "notFound": "No Recipe Ingredients found"
+      },
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Recipe Ingredient {{ id }}?"
+      },
+      "detail": {
+        "title": "Recipe Ingredient"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "product": "Product",
+      "productUnit": "Product Unit",
+      "recipe": "Recipe"
+    }
+  },
+  "productsApp": {
+    "productsRecipeIngredient": {
+      "created": "Utworzono nowy obiekt typu Recipe Ingredient z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Recipe Ingredient z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Recipe Ingredient z identyfikatorem {{ param }}"
+    }
+  }
+}

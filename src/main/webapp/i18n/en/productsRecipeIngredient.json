@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "productsRecipeIngredient": {
+      "home": {
+        "title": "Recipe Ingredients",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Recipe Ingredient",
+        "createOrEditLabel": "Create or edit a Recipe Ingredient",
+        "search": "Search for Recipe Ingredient",
+        "notFound": "No Recipe Ingredients found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Recipe Ingredient {{ id }}?"
+      },
+      "detail": {
+        "title": "Recipe Ingredient"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "product": "Product",
+      "productUnit": "Product Unit",
+      "recipe": "Recipe"
+    }
+  },
+  "productsApp": {
+    "productsRecipeIngredient": {
+      "created": "A new Recipe Ingredient is created with identifier {{ param }}",
+      "updated": "A Recipe Ingredient is updated with identifier {{ param }}",
+      "deleted": "A Recipe Ingredient is deleted with identifier {{ param }}"
+    }
+  }
+}
