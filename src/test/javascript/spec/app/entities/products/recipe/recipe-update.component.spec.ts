@@ -10,8 +10,6 @@ import RecipeService from '@/entities/products/recipe/recipe.service';
 
 import RecipeIngredientService from '@/entities/products/recipe-ingredient/recipe-ingredient.service';
 
-import UserOAuth2Service from '@/entities/user/user.oauth2.service';
-
 const localVue = createLocalVue();
 
 config.initVueApp(localVue);
@@ -43,8 +41,6 @@ describe('Component Tests', () => {
           recipeService: () => recipeServiceStub,
 
           recipeIngredientService: () => new RecipeIngredientService(),
-
-          userOAuth2Service: () => new UserOAuth2Service(),
         },
       });
       comp = wrapper.vm;

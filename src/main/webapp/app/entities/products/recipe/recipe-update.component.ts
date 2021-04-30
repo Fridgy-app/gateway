@@ -5,8 +5,6 @@ import { required } from 'vuelidate/lib/validators';
 import RecipeIngredientService from '@/entities/products/recipe-ingredient/recipe-ingredient.service';
 import { IRecipeIngredient } from '@/shared/model/products/recipe-ingredient.model';
 
-import UserOAuth2Service from '@/entities/user/user.oauth2.service';
-
 import { IRecipe, Recipe } from '@/shared/model/products/recipe.model';
 import RecipeService from './recipe.service';
 
@@ -31,10 +29,6 @@ export default class RecipeUpdate extends Vue {
   @Inject('recipeIngredientService') private recipeIngredientService: () => RecipeIngredientService;
 
   public recipeIngredients: IRecipeIngredient[] = [];
-
-  @Inject('userOAuth2Service') private userOAuth2Service: () => UserOAuth2Service;
-
-  public users: Array<any> = [];
   public isSaving = false;
   public currentLanguage = '';
 
@@ -109,11 +103,6 @@ export default class RecipeUpdate extends Vue {
       .retrieve()
       .then(res => {
         this.recipeIngredients = res.data;
-      });
-    this.userOAuth2Service()
-      .retrieve()
-      .then(res => {
-        this.users = res.data;
       });
   }
 }

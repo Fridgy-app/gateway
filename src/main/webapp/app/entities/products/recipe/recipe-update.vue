@@ -52,19 +52,6 @@
               </small>
             </div>
           </div>
-          <div class="form-group">
-            <label class="form-control-label" v-text="$t('gatewayApp.productsRecipe.user')" for="recipe-user">User</label>
-            <select class="form-control" id="recipe-user" data-cy="user" name="user" v-model="recipe.user">
-              <option v-bind:value="null"></option>
-              <option
-                v-bind:value="recipe.user && userOption.id === recipe.user.id ? recipe.user : userOption"
-                v-for="userOption in users"
-                :key="userOption.id"
-              >
-                {{ userOption.login }}
-              </option>
-            </select>
-          </div>
         </div>
         <div>
           <button type="button" id="cancel-save" class="btn btn-secondary" v-on:click="previousState()">

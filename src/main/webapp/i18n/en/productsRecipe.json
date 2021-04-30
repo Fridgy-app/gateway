@@ -18,8 +18,7 @@
       "id": "ID",
       "name": "Name",
       "instructionsBody": "Instructions Body",
-      "recipeIngredient": "Recipe Ingredient",
-      "user": "User"
+      "recipeIngredient": "Recipe Ingredient"
     }
   },
   "productsApp": {

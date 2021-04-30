@@ -100,8 +100,6 @@ describe('Recipe e2e test', () => {
       .invoke('val')
       .should('match', new RegExp('conglomeration Ball e-business'));
 
-    cy.setFieldSelectToLastOfEntity('user');
-
     cy.get(entityCreateSaveButtonSelector).click({ force: true });
     cy.scrollTo('top', { ensureScrollable: false });
     cy.get(entityCreateSaveButtonSelector).should('not.exist');

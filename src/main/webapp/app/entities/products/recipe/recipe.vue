@@ -62,10 +62,6 @@
               <span v-text="$t('gatewayApp.productsRecipe.instructionsBody')">Instructions Body</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'instructionsBody'"></jhi-sort-indicator>
             </th>
-            <th scope="row" v-on:click="changeOrder('user.login')">
-              <span v-text="$t('gatewayApp.productsRecipe.user')">User</span>
-              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'user.login'"></jhi-sort-indicator>
-            </th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -76,9 +72,6 @@
             </td>
             <td>{{ recipe.name }}</td>
             <td>{{ recipe.instructionsBody }}</td>
-            <td>
-              {{ recipe.user ? recipe.user.login : '' }}
-            </td>
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'RecipeView', params: { recipeId: recipe.id } }" custom v-slot="{ navigate }">
