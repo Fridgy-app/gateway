@@ -41,6 +41,9 @@
     "pages": [],
     "creationTimestamp": 1619784585669,
     "entities": ["GroceryItem", "RecipeIngredient", "ProductUnit", "Product", "Recipe", "ProductCategory"],
-    "lastLiquibaseTimestamp": 1619784945000
+    "lastLiquibaseTimestamp": 1619784945000,
+    "appFolder": "gateway",
+    "targetImageName": "fridgy/gateway",
+    "dbPeerCount": 1
   }
 }
