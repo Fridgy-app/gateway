@@ -45,6 +45,26 @@
             />
           </div>
           <div class="form-group">
+            <label v-text="$t('gatewayApp.productsProduct.productUnit')" for="product-productUnit">Product Unit</label>
+            <select
+              class="form-control"
+              id="product-productUnit"
+              data-cy="productUnit"
+              multiple
+              name="productUnit"
+              v-if="product.productUnits !== undefined"
+              v-model="product.productUnits"
+            >
+              <option
+                v-bind:value="getSelected(product.productUnits, productUnitOption)"
+                v-for="productUnitOption in productUnits"
+                :key="productUnitOption.id"
+              >
+                {{ productUnitOption.id }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
             <label class="form-control-label" v-text="$t('gatewayApp.productsProduct.productCategory')" for="product-productCategory"
               >Product Category</label
             >
@@ -66,23 +86,6 @@
                 :key="productCategoryOption.id"
               >
                 {{ productCategoryOption.id }}
-              </option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-control-label" v-text="$t('gatewayApp.productsProduct.productUnit')" for="product-productUnit"
-              >Product Unit</label
-            >
-            <select class="form-control" id="product-productUnit" data-cy="productUnit" name="productUnit" v-model="product.productUnit">
-              <option v-bind:value="null"></option>
-              <option
-                v-bind:value="
-                  product.productUnit && productUnitOption.id === product.productUnit.id ? product.productUnit : productUnitOption
-                "
-                v-for="productUnitOption in productUnits"
-                :key="productUnitOption.id"
-              >
-                {{ productUnitOption.id }}
               </option>
             </select>
           </div>

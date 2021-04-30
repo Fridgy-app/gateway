@@ -66,10 +66,6 @@
               <span v-text="$t('gatewayApp.productsProduct.productCategory')">Product Category</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'productCategory.id'"></jhi-sort-indicator>
             </th>
-            <th scope="row" v-on:click="changeOrder('productUnit.id')">
-              <span v-text="$t('gatewayApp.productsProduct.productUnit')">Product Unit</span>
-              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'productUnit.id'"></jhi-sort-indicator>
-            </th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -84,13 +80,6 @@
               <div v-if="product.productCategory">
                 <router-link :to="{ name: 'ProductCategoryView', params: { productCategoryId: product.productCategory.id } }">{{
                   product.productCategory.id
-                }}</router-link>
-              </div>
-            </td>
-            <td>
-              <div v-if="product.productUnit">
-                <router-link :to="{ name: 'ProductUnitView', params: { productUnitId: product.productUnit.id } }">{{
-                  product.productUnit.id
                 }}</router-link>
               </div>
             </td>

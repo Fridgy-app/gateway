@@ -8,9 +8,9 @@ import ProductUpdateComponent from '@/entities/products/product/product-update.v
 import ProductClass from '@/entities/products/product/product-update.component';
 import ProductService from '@/entities/products/product/product.service';
 
-import ProductCategoryService from '@/entities/products/product-category/product-category.service';
-
 import ProductUnitService from '@/entities/products/product-unit/product-unit.service';
+
+import ProductCategoryService from '@/entities/products/product-category/product-category.service';
 
 const localVue = createLocalVue();
 
@@ -42,9 +42,9 @@ describe('Component Tests', () => {
         provide: {
           productService: () => productServiceStub,
 
-          productCategoryService: () => new ProductCategoryService(),
-
           productUnitService: () => new ProductUnitService(),
+
+          productCategoryService: () => new ProductCategoryService(),
         },
       });
       comp = wrapper.vm;

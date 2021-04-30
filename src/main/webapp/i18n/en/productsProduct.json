@@ -18,8 +18,8 @@
       "id": "ID",
       "name": "Name",
       "eanCode": "Ean Code",
-      "productCategory": "Product Category",
-      "productUnit": "Product Unit"
+      "productUnit": "Product Unit",
+      "productCategory": "Product Category"
     }
   },
   "productsApp": {

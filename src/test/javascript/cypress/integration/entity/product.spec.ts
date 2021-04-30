@@ -97,9 +97,9 @@ describe('Product e2e test', () => {
 
     cy.get(`[data-cy="eanCode"]`).type('reboot', { force: true }).invoke('val').should('match', new RegExp('reboot'));
 
-    cy.setFieldSelectToLastOfEntity('productCategory');
-
     cy.setFieldSelectToLastOfEntity('productUnit');
+
+    cy.setFieldSelectToLastOfEntity('productCategory');
 
     cy.get(entityCreateSaveButtonSelector).click({ force: true });
     cy.scrollTo('top', { ensureScrollable: false });

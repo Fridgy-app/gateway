@@ -2,11 +2,11 @@ import { Component, Vue, Inject } from 'vue-property-decorator';
 
 import { required } from 'vuelidate/lib/validators';
 
-import ProductCategoryService from '@/entities/products/product-category/product-category.service';
-import { IProductCategory } from '@/shared/model/products/product-category.model';
-
 import ProductUnitService from '@/entities/products/product-unit/product-unit.service';
 import { IProductUnit } from '@/shared/model/products/product-unit.model';
+
+import ProductCategoryService from '@/entities/products/product-category/product-category.service';
+import { IProductCategory } from '@/shared/model/products/product-category.model';
 
 import { IProduct, Product } from '@/shared/model/products/product.model';
 import ProductService from './product.service';
@@ -27,13 +27,13 @@ export default class ProductUpdate extends Vue {
   @Inject('productService') private productService: () => ProductService;
   public product: IProduct = new Product();
 
-  @Inject('productCategoryService') private productCategoryService: () => ProductCategoryService;
-
-  public productCategories: IProductCategory[] = [];
-
   @Inject('productUnitService') private productUnitService: () => ProductUnitService;
 
   public productUnits: IProductUnit[] = [];
+
+  @Inject('productCategoryService') private productCategoryService: () => ProductCategoryService;
+
+  public productCategories: IProductCategory[] = [];
   public isSaving = false;
   public currentLanguage = '';
 
@@ -54,6 +54,7 @@ export default class ProductUpdate extends Vue {
         this.currentLanguage = this.$store.getters.currentLanguage;
       }
     );
+    this.product.productUnits = [];
   }
 
   public save(): void {
@@ -104,15 +105,26 @@ export default class ProductUpdate extends Vue {
   }
 
   public initRelationships(): void {
-    this.productCategoryService()
-      .retrieve()
-      .then(res => {
-        this.productCategories = res.data;
-      });
     this.productUnitService()
       .retrieve()
       .then(res => {
         this.productUnits = res.data;
       });
+    this.productCategoryService()
+      .retrieve()
+      .then(res => {
+        this.productCategories = res.data;
+      });
+  }
+
+  public getSelected(selectedVals, option): any {
+    if (selectedVals) {
+      for (let i = 0; i < selectedVals.length; i++) {
+        if (option.id === selectedVals[i].id) {
+          return selectedVals[i];
+        }
+      }
+    }
+    return option;
   }
 }

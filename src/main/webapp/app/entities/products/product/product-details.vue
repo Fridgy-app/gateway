@@ -19,22 +19,21 @@
             <span>{{ product.eanCode }}</span>
           </dd>
           <dt>
+            <span v-text="$t('gatewayApp.productsProduct.productUnit')">Product Unit</span>
+          </dt>
+          <dd>
+            <span v-for="(productUnit, i) in product.productUnits" :key="productUnit.id"
+              >{{ i > 0 ? ', ' : '' }}
+              <router-link :to="{ name: 'ProductUnitView', params: { productUnitId: productUnit.id } }">{{ productUnit.id }}</router-link>
+            </span>
+          </dd>
+          <dt>
             <span v-text="$t('gatewayApp.productsProduct.productCategory')">Product Category</span>
           </dt>
           <dd>
             <div v-if="product.productCategory">
               <router-link :to="{ name: 'ProductCategoryView', params: { productCategoryId: product.productCategory.id } }">{{
                 product.productCategory.id
-              }}</router-link>
-            </div>
-          </dd>
-          <dt>
-            <span v-text="$t('gatewayApp.productsProduct.productUnit')">Product Unit</span>
-          </dt>
-          <dd>
-            <div v-if="product.productUnit">
-              <router-link :to="{ name: 'ProductUnitView', params: { productUnitId: product.productUnit.id } }">{{
-                product.productUnit.id
               }}</router-link>
             </div>
           </dd>

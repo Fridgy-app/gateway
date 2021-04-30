@@ -1,12 +1,12 @@
-import { IProductCategory } from '@/shared/model/products/product-category.model';
 import { IProductUnit } from '@/shared/model/products/product-unit.model';
+import { IProductCategory } from '@/shared/model/products/product-category.model';
 
 export interface IProduct {
   id?: number;
   name?: string;
   eanCode?: string | null;
+  productUnits?: IProductUnit[] | null;
   productCategory?: IProductCategory | null;
-  productUnit?: IProductUnit | null;
 }
 
 export class Product implements IProduct {
@@ -14,7 +14,7 @@ export class Product implements IProduct {
     public id?: number,
     public name?: string,
     public eanCode?: string | null,
-    public productCategory?: IProductCategory | null,
-    public productUnit?: IProductUnit | null
+    public productUnits?: IProductUnit[] | null,
+    public productCategory?: IProductCategory | null
   ) {}
 }
