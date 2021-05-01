@@ -29,30 +29,6 @@
             <font-awesome-icon icon="th-list" />
             <span class="no-bold" v-text="$t('global.menu.entities.main')">Entities</span>
           </span>
-          <b-dropdown-item to="/grocery-item">
-            <font-awesome-icon icon="asterisk" />
-            <span v-text="$t('global.menu.entities.productsGroceryItem')">Grocery Item</span>
-          </b-dropdown-item>
-          <b-dropdown-item to="/recipe-ingredient">
-            <font-awesome-icon icon="asterisk" />
-            <span v-text="$t('global.menu.entities.productsRecipeIngredient')">Recipe Ingredient</span>
-          </b-dropdown-item>
-          <b-dropdown-item to="/product-unit">
-            <font-awesome-icon icon="asterisk" />
-            <span v-text="$t('global.menu.entities.productsProductUnit')">Product Unit</span>
-          </b-dropdown-item>
-          <b-dropdown-item to="/product">
-            <font-awesome-icon icon="asterisk" />
-            <span v-text="$t('global.menu.entities.productsProduct')">Product</span>
-          </b-dropdown-item>
-          <b-dropdown-item to="/recipe">
-            <font-awesome-icon icon="asterisk" />
-            <span v-text="$t('global.menu.entities.productsRecipe')">Recipe</span>
-          </b-dropdown-item>
-          <b-dropdown-item to="/product-category">
-            <font-awesome-icon icon="asterisk" />
-            <span v-text="$t('global.menu.entities.productsProductCategory')">Product Category</span>
-          </b-dropdown-item>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
         <b-nav-item-dropdown

@@ -26,12 +26,6 @@ import GatewayService from '@/admin/gateway/gateway.service';
 import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 /* tslint:disable */
 
-import GroceryItemService from '@/entities/products/grocery-item/grocery-item.service';
-import RecipeIngredientService from '@/entities/products/recipe-ingredient/recipe-ingredient.service';
-import ProductUnitService from '@/entities/products/product-unit/product-unit.service';
-import ProductService from '@/entities/products/product/product.service';
-import RecipeService from '@/entities/products/recipe/recipe.service';
-import ProductCategoryService from '@/entities/products/product-category/product-category.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -89,12 +83,6 @@ new Vue({
 
     userOAuth2Service: () => new UserOAuth2Service(),
     translationService: () => translationService,
-    groceryItemService: () => new GroceryItemService(),
-    recipeIngredientService: () => new RecipeIngredientService(),
-    productUnitService: () => new ProductUnitService(),
-    productService: () => new ProductService(),
-    recipeService: () => new RecipeService(),
-    productCategoryService: () => new ProductCategoryService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

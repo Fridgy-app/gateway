@@ -7,12 +7,6 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
-        "productsGroceryItem": "Grocery Item",
-        "productsRecipeIngredient": "Recipe Ingredient",
-        "productsProductUnit": "Product Unit",
-        "productsProduct": "Product",
-        "productsRecipe": "Recipe",
-        "productsProductCategory": "Product Category",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
