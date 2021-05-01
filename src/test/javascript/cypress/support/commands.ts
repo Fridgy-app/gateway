@@ -41,8 +41,9 @@ export const configurationPageHeadingSelector = '[data-cy="configurationPageHead
 // End Specific Selector Attributes for Cypress
 // ***********************************************
 
-export const classInvalid = 'invalid';
-export const classValid = 'valid';
+export const classInvalid = 'ng-invalid';
+
+export const classValid = 'ng-valid';
 
 // Convert this to a module instead of script (allows import/export)
 export {};

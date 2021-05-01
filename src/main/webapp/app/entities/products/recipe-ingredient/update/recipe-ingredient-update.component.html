@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-recipe-ingredient-heading"
+        data-cy="RecipeIngredientCreateUpdateHeading"
+        jhiTranslate="gatewayApp.productsRecipeIngredient.home.createOrEditLabel"
+      >
+        Create or edit a Recipe Ingredient
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gatewayApp.productsRecipeIngredient.quantity" for="field_quantity"
+            >Quantity</label
+          >
+          <input type="number" class="form-control" name="quantity" id="field_quantity" data-cy="quantity" formControlName="quantity" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gatewayApp.productsRecipeIngredient.product" for="field_product">Product</label>
+          <select class="form-control" id="field_product" data-cy="product" name="product" formControlName="product">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="productOption.id === editForm.get('product')!.value?.id ? editForm.get('product')!.value : productOption"
+              *ngFor="let productOption of productsSharedCollection; trackBy: trackProductById"
+            >
+              {{ productOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gatewayApp.productsRecipeIngredient.productUnit" for="field_productUnit"
+            >Product Unit</label
+          >
+          <select class="form-control" id="field_productUnit" data-cy="productUnit" name="productUnit" formControlName="productUnit">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                productUnitOption.id === editForm.get('productUnit')!.value?.id ? editForm.get('productUnit')!.value : productUnitOption
+              "
+              *ngFor="let productUnitOption of productUnitsSharedCollection; trackBy: trackProductUnitById"
+            >
+              {{ productUnitOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gatewayApp.productsRecipeIngredient.recipe" for="field_recipe">Recipe</label>
+          <select class="form-control" id="field_recipe" data-cy="recipe" name="recipe" formControlName="recipe">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="recipeOption.id === editForm.get('recipe')!.value?.id ? editForm.get('recipe')!.value : recipeOption"
+              *ngFor="let recipeOption of recipesSharedCollection; trackBy: trackRecipeById"
+            >
+              {{ recipeOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

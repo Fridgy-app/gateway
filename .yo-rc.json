@@ -1,7 +1,7 @@
 {
   "generator-jhipster": {
     "authenticationType": "oauth2",
-    "clientFramework": "vue",
+    "clientFramework": "angularX",
     "serverPort": "8080",
     "serviceDiscoveryType": "eureka",
     "skipUserManagement": true,
@@ -39,11 +39,9 @@
     "skipCheckLengthOfIdentifier": false,
     "skipFakeData": false,
     "pages": [],
-    "creationTimestamp": 1619909071593,
+    "creationTimestamp": 1619909928993,
     "entities": ["GroceryItem", "RecipeIngredient", "ProductUnit", "Product", "Recipe", "ProductCategory"],
-    "lastLiquibaseTimestamp": 1619909431000,
-    "appFolder": "gateway",
-    "targetImageName": "fridgy/gateway",
-    "dbPeerCount": 1
+    "lastLiquibaseTimestamp": 1619910288000,
+    "appFolder": "gateway"
   }
 }

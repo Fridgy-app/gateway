@@ -1,24 +1,28 @@
-import Vue from 'vue';
-import { Component, Inject } from 'vue-property-decorator';
-import GatewayService from './gateway.service';
+import { Component, OnInit } from '@angular/core';
 
-@Component
-export default class JhiGatewayComponent extends Vue {
-  public gatewayRoutes: any[] = [];
-  public updatingRoutes = false;
-  @Inject('gatewayService') private gatewayService: () => GatewayService;
+import { GatewayRoutesService } from './gateway-routes.service';
+import { GatewayRoute } from './gateway-route.model';
 
-  public mounted(): void {
+@Component({
+  selector: 'jhi-gateway',
+  templateUrl: './gateway.component.html',
+  providers: [GatewayRoutesService],
+})
+export class GatewayComponent implements OnInit {
+  gatewayRoutes: GatewayRoute[] = [];
+  updatingRoutes = false;
+
+  constructor(private gatewayRoutesService: GatewayRoutesService) {}
+
+  ngOnInit(): void {
     this.refresh();
   }
 
-  public refresh(): void {
+  refresh(): void {
     this.updatingRoutes = true;
-    this.gatewayService()
-      .findAll()
-      .then(res => {
-        this.gatewayRoutes = res.data;
-        this.updatingRoutes = false;
-      });
+    this.gatewayRoutesService.findAll().subscribe(gatewayRoutes => {
+      this.gatewayRoutes = gatewayRoutes;
+      this.updatingRoutes = false;
+    });
   }
 }
