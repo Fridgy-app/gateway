@@ -54,7 +54,7 @@ jobs:
                   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               run: |
                   if [ ! -z "$SONAR_TOKEN" ]; then
-                      ./gradlew sonarqube --no-daemon -Dsonar.organization=fridgy -Dsonar.host.url=https://sonarcloud.io
+                      ./gradlew sonarqube --no-daemon -Dsonar.organization=fridgy -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Fridgy-app_gateway
                   else
                       echo No SONAR_TOKEN, skipping...
                   fi
