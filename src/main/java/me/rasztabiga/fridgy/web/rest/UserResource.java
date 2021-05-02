@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import javax.validation.constraints.Pattern;
 import me.rasztabiga.fridgy.config.Constants;
+import me.rasztabiga.fridgy.domain.User;
 import me.rasztabiga.fridgy.security.AuthoritiesConstants;
 import me.rasztabiga.fridgy.service.UserService;
 import me.rasztabiga.fridgy.service.dto.AdminUserDTO;

@@ -73,6 +73,7 @@ public class EntityManager {
      * @param selectFrom a representation of a select statement.
      * @param entityType the entity type which holds the table name.
      * @param pageable page parameter, or null, if everything needs to be returned
+     * @param criteria sql criteria
      * @return sql select statement
      */
     public String createSelect(SelectFromAndJoin selectFrom, Class<?> entityType, Pageable pageable, Criteria criteria) {
@@ -104,6 +105,7 @@ public class EntityManager {
      * @param selectFrom a representation of a select statement.
      * @param entityType the entity type which holds the table name.
      * @param pageable page parameter, or null, if everything needs to be returned
+     * @param criteria sql criteria
      * @return sql select statement
      */
     public String createSelect(SelectFromAndJoinCondition selectFrom, Class<?> entityType, Pageable pageable, Criteria criteria) {
