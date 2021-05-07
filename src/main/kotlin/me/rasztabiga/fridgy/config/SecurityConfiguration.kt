@@ -83,12 +83,14 @@ class SecurityConfiguration(
             .pathMatchers("/").permitAll()
             .pathMatchers("/*.*").permitAll()
             .pathMatchers("/api/auth-info").permitAll()
+            .pathMatchers("/api/admin/**").hasAuthority(ADMIN)
             .pathMatchers("/api/**").authenticated()
             .pathMatchers("/services/**").authenticated()
             .pathMatchers("/management/health").permitAll()
+            .pathMatchers("/management/health/**").permitAll()
             .pathMatchers("/management/info").permitAll()
             .pathMatchers("/management/prometheus").permitAll()
-            .pathMatchers("/management/**").hasAuthority(ADMIN)
+            .pathMatchers("/management/**").hasAuthority(ADMIN);
 
         http.oauth2Login()
             .and()
