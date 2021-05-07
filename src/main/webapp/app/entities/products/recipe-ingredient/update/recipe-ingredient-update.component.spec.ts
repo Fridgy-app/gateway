@@ -50,10 +50,10 @@ describe('Component Tests', () => {
     describe('ngOnInit', () => {
       it('Should call Product query and add missing value', () => {
         const recipeIngredient: IRecipeIngredient = { id: 456 };
-        const product: IProduct = { id: 67141 };
+        const product: IProduct = { id: 56585 };
         recipeIngredient.product = product;
 
-        const productCollection: IProduct[] = [{ id: 78804 }];
+        const productCollection: IProduct[] = [{ id: 78216 }];
         spyOn(productService, 'query').and.returnValue(of(new HttpResponse({ body: productCollection })));
         const additionalProducts = [product];
         const expectedCollection: IProduct[] = [...additionalProducts, ...productCollection];
@@ -69,10 +69,10 @@ describe('Component Tests', () => {
 
       it('Should call ProductUnit query and add missing value', () => {
         const recipeIngredient: IRecipeIngredient = { id: 456 };
-        const productUnit: IProductUnit = { id: 59697 };
+        const productUnit: IProductUnit = { id: 80976 };
         recipeIngredient.productUnit = productUnit;
 
-        const productUnitCollection: IProductUnit[] = [{ id: 95585 }];
+        const productUnitCollection: IProductUnit[] = [{ id: 14412 }];
         spyOn(productUnitService, 'query').and.returnValue(of(new HttpResponse({ body: productUnitCollection })));
         const additionalProductUnits = [productUnit];
         const expectedCollection: IProductUnit[] = [...additionalProductUnits, ...productUnitCollection];
@@ -91,10 +91,10 @@ describe('Component Tests', () => {
 
       it('Should call Recipe query and add missing value', () => {
         const recipeIngredient: IRecipeIngredient = { id: 456 };
-        const recipe: IRecipe = { id: 2515 };
+        const recipe: IRecipe = { id: 72872 };
         recipeIngredient.recipe = recipe;
 
-        const recipeCollection: IRecipe[] = [{ id: 78793 }];
+        const recipeCollection: IRecipe[] = [{ id: 73427 }];
         spyOn(recipeService, 'query').and.returnValue(of(new HttpResponse({ body: recipeCollection })));
         const additionalRecipes = [recipe];
         const expectedCollection: IRecipe[] = [...additionalRecipes, ...recipeCollection];
@@ -110,11 +110,11 @@ describe('Component Tests', () => {
 
       it('Should update editForm', () => {
         const recipeIngredient: IRecipeIngredient = { id: 456 };
-        const product: IProduct = { id: 58366 };
+        const product: IProduct = { id: 41163 };
         recipeIngredient.product = product;
-        const productUnit: IProductUnit = { id: 411 };
+        const productUnit: IProductUnit = { id: 64647 };
         recipeIngredient.productUnit = productUnit;
-        const recipe: IRecipe = { id: 38777 };
+        const recipe: IRecipe = { id: 25303 };
         recipeIngredient.recipe = recipe;
 
         activatedRoute.data = of({ recipeIngredient });

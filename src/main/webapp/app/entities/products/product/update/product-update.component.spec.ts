@@ -68,10 +68,10 @@ describe('Component Tests', () => {
 
       it('Should call ProductCategory query and add missing value', () => {
         const product: IProduct = { id: 456 };
-        const productCategory: IProductCategory = { id: 2462 };
+        const productCategory: IProductCategory = { id: 49563 };
         product.productCategory = productCategory;
 
-        const productCategoryCollection: IProductCategory[] = [{ id: 13314 }];
+        const productCategoryCollection: IProductCategory[] = [{ id: 91149 }];
         spyOn(productCategoryService, 'query').and.returnValue(of(new HttpResponse({ body: productCategoryCollection })));
         const additionalProductCategories = [productCategory];
         const expectedCollection: IProductCategory[] = [...additionalProductCategories, ...productCategoryCollection];
@@ -92,7 +92,7 @@ describe('Component Tests', () => {
         const product: IProduct = { id: 456 };
         const productUnits: IProductUnit = { id: 63409 };
         product.productUnits = [productUnits];
-        const productCategory: IProductCategory = { id: 37388 };
+        const productCategory: IProductCategory = { id: 38755 };
         product.productCategory = productCategory;
 
         activatedRoute.data = of({ product });

@@ -23,14 +23,24 @@
     "testFrameworks": ["cypress"],
     "websocket": false,
     "applicationType": "gateway",
-    "blueprints": [],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.12.1"
+      }
+    ],
     "clientPackageManager": "npm",
     "clientTheme": "darkly",
     "clientThemeVariant": "dark",
     "dtoSuffix": "DTO",
     "jhipsterVersion": "7.0.1",
     "nativeLanguage": "en",
-    "otherModules": [],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.12.1"
+      }
+    ],
     "packageName": "me.rasztabiga.fridgy",
     "packageFolder": "me/rasztabiga/fridgy",
     "reactive": true,
@@ -39,9 +49,9 @@
     "skipCheckLengthOfIdentifier": false,
     "skipFakeData": false,
     "pages": [],
-    "creationTimestamp": 1619909928993,
+    "creationTimestamp": 1620396220001,
     "entities": ["GroceryItem", "RecipeIngredient", "ProductUnit", "Product", "Recipe", "ProductCategory"],
-    "lastLiquibaseTimestamp": 1619910288000,
+    "lastLiquibaseTimestamp": 1620396580000,
     "appFolder": "gateway",
     "targetImageName": "fridgy/gateway",
     "dbPeerCount": 1

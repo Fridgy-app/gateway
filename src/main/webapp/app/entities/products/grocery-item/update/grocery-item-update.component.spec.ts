@@ -70,10 +70,10 @@ describe('Component Tests', () => {
 
       it('Should call Product query and add missing value', () => {
         const groceryItem: IGroceryItem = { id: 456 };
-        const product: IProduct = { id: 46007 };
+        const product: IProduct = { id: 19809 };
         groceryItem.product = product;
 
-        const productCollection: IProduct[] = [{ id: 77380 }];
+        const productCollection: IProduct[] = [{ id: 37640 }];
         spyOn(productService, 'query').and.returnValue(of(new HttpResponse({ body: productCollection })));
         const additionalProducts = [product];
         const expectedCollection: IProduct[] = [...additionalProducts, ...productCollection];
@@ -89,10 +89,10 @@ describe('Component Tests', () => {
 
       it('Should call ProductUnit query and add missing value', () => {
         const groceryItem: IGroceryItem = { id: 456 };
-        const unit: IProductUnit = { id: 89946 };
+        const unit: IProductUnit = { id: 30789 };
         groceryItem.unit = unit;
 
-        const productUnitCollection: IProductUnit[] = [{ id: 82147 }];
+        const productUnitCollection: IProductUnit[] = [{ id: 89262 }];
         spyOn(productUnitService, 'query').and.returnValue(of(new HttpResponse({ body: productUnitCollection })));
         const additionalProductUnits = [unit];
         const expectedCollection: IProductUnit[] = [...additionalProductUnits, ...productUnitCollection];
@@ -113,9 +113,9 @@ describe('Component Tests', () => {
         const groceryItem: IGroceryItem = { id: 456 };
         const user: IUser = { id: 'Table Shirt' };
         groceryItem.user = user;
-        const product: IProduct = { id: 4565 };
+        const product: IProduct = { id: 26991 };
         groceryItem.product = product;
-        const unit: IProductUnit = { id: 96883 };
+        const unit: IProductUnit = { id: 35970 };
         groceryItem.unit = unit;
 
         activatedRoute.data = of({ groceryItem });
